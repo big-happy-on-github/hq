@@ -9,8 +9,9 @@ body {
 }
 
 .center {
-    display: flex; /* Enables flexbox for the div */
-    justify-content: center; /* Centers content horizontally */
-    align-items: center; /* Centers content vertically (optional, can be removed if only X-axis centering is needed) */
-    text-align: center; /* Ensures text or inline elements are centered */
+  display: flex; /* Enables flexbox */
+  justify-content: center; /* Centers content horizontally (X-axis) */
+  align-items: center; /* Centers content vertically (Y-axis) */
+  height: 100vh; /* Ensures the parent div takes up the full viewport height */
+  text-align: center; /* Centers text or inline elements */
 }
