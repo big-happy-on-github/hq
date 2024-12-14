@@ -5,8 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>hq/login</title>
     <link rel="stylesheet" href="/styles.css" />
+    <style>
+        .input {
+            border: 2px solid #e8e8e8;
+            padding: 15px;
+            border-radius: 10px;
+            background-color: #212121;
+            font-size: small;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        .input:focus {
+             outline-color: white;
+             background-color: #212121;
+             color: #e8e8e8;
+             box-shadow: 5px 5px #888888;
+        }
+    </style>
 </head>
 <body>
-    <h1>HQ LOGIN REQUIRED</h1>
+    <div class="center">
+        <h2>fill out required information below:</h1>
+        <h3>passwords</h3>
+        <input type="password" name="text" class="input" placeholder="Enter password">
+        <input type="password" name="text" class="input" placeholder="Enter secondary password">
+        <input type="password" name="text" class="input" placeholder="Enter PIN">
+        <h3>security questions</h3>
+        <input type="password" name="text" class="input" placeholder="Enter favorite color">
+        <input type="password" name="text" class="input" placeholder="Enter favorite animal">
+        <input type="password" name="text" class="input" placeholder="Enter favorite movie">
+    </div>
 </body>
 </html>
