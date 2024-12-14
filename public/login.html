@@ -22,10 +22,31 @@
              color: #e8e8e8;
              box-shadow: 5px 5px #888888;
         }
+
+        #form {
+            display: flex; /* Enables flexbox */
+            flex-direction: column; /* Stacks items vertically */
+            align-items: center; /* Centers items horizontally */
+            width: 100%; /* Takes full width */
+            max-width: 400px; /* Limits width for better layout */
+            margin: 0 auto; /* Centers the form in the middle of the page */
+            padding: 20px; /* Adds space inside the form */
+            background-color: #f8f9fa; /* Light background for contrast */
+            border: 1px solid #dee2e6; /* Subtle border */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+        }
+            
+        #form h2, #form h3 {
+            text-align: center; /* Center-aligns text */
+            color: #343a40; /* Darker text color for headings */
+            margin-bottom: 16px; /* Adds spacing below headings */
+        }
+            
     </style>
 </head>
 <body>
-    <div class="center">
+    <div id="form" class="center">
         <h2>fill out required information below:</h1>
         <h3>passwords</h3>
         <input type="password" name="text" class="input" placeholder="Enter password">
