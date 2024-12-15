@@ -72,6 +72,7 @@
         async function check() {
             const response = await fetch("/.netlify/functions/secure");
             const passwords = await response.json();
+            console.log(passwords);
             list.forEach(input => {
                 passwords.forEach(password => {
                     if (password.input == document.getElementById(input).value.trim()) {
