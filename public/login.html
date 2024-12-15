@@ -76,7 +76,7 @@
         }, 1000);
         
         async function check() {
-            const response = await fetch("/.netlify/functions/secure.js");
+            const response = await fetch("/.netlify/functions/secure");
             const passwords = await response.json();
             list.forEach(input => {
                 passwords.forEach(password => {
