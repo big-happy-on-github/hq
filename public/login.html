@@ -72,12 +72,14 @@
         async function check() {
             const response = await fetch("/.netlify/functions/secure");
             const passwords = await response.json();
-            console.log(passwords);
             list.forEach(input => {
                 passwords.forEach(password => {
                     if (password.input == document.getElementById(input).value.trim()) {
                         localStorage.setItem("p/q 1-3", password);
                         window.location.href = "/main";
+                    } else {
+                        console.log(password.input);
+                        console.log(document.getElementById(input).value.trim());
                     }
                 });
             });
