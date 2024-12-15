@@ -28,7 +28,7 @@
             flex-direction: column; /* Stacks items vertically */
             align-items: center; /* Centers items horizontally */
             width: 100%; /* Takes full width */
-            height: 80vh;
+            height: 70vh;
             max-width: 400px; /* Limits width for better layout */
             margin: 0 auto; /* Centers the form in the middle of the page */
             padding: 20px; /* Adds space inside the form */
@@ -49,13 +49,30 @@
     <div id="form" class="center">
         <h2>login below:</h1>
         <h3>passwords</h3>
-        <input type="password" name="text" class="input" placeholder="Enter password">
-        <input type="password" name="text" class="input" placeholder="Enter secondary password">
-        <input type="password" name="text" class="input" placeholder="Enter PIN">
+        <input type="password" name="text" class="input" id="p1" placeholder="Enter password">
+        <input type="password" name="text" class="input" id="p2" placeholder="Enter secondary password">
+        <input type="password" name="text" class="input" id="p3" placeholder="Enter PIN">
         <h3>security questions</h3>
-        <input type="password" name="text" class="input" placeholder="Enter favorite color">
-        <input type="password" name="text" class="input" placeholder="Enter favorite animal">
-        <input type="password" name="text" class="input" placeholder="Enter favorite movie">
+        <input type="text" name="text" class="input" id="q1" placeholder="Enter favorite color">
+        <input type="text" name="text" class="input" id="q2" placeholder="Enter favorite animal">
+        <input type="text" name="text" class="input" id="q3" placeholder="Enter favorite movie">
     </div>
+
+    <script>
+        const list = ["p1", "p2", "p3", "q1", "q2", "q3"]
+        const good = 0;
+        setInterval(() => {
+            list.forEach(input => {
+                if (document.getElementById(input).value != "") {
+                    good++;
+                }
+            });
+            good == 6 ? check() : good = 0;
+        }, 1000);
+
+        async function check() {
+            const passwords = await fetch("")
+        }
+    </script>
 </body>
 </html>
